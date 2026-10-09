@@ -1,0 +1,420 @@
+# Sprint 12 — AI Prompt Engineering Documentation
+
+**Project:** Storybook Component Library  
+**Track:** Track A — Frontend Specialist  
+**Phase:** Phase 4 — Advanced Integration  
+**Sprint:** Sprint 12 — Real-Time Systems & UI Isolation
+
+---
+
+## 1. Project Objective
+
+The objective of this sprint is to configure Storybook within an existing Next.js/React project and develop an isolated, reusable UI component library.
+
+The implementation focuses on three core components:
+
+1. Button
+2. Input Field
+3. Card / Product Card
+
+The component library must support interactive Storybook Args and Controls, component variants, Light Mode and Dark Mode, and static Storybook deployment.
+
+AI assistance is used to support implementation, configuration, debugging, and documentation. Generated code must be reviewed and tested against the actual project.
+
+## 2. Prompt Engineering Strategy
+
+The development workflow follows these principles:
+
+- **Inspect before modifying:** Understand the existing repository, framework, file structure, dependencies, and styling system before making changes.
+- **Implement incrementally:** Complete and verify Phase 1 before starting Phase 2, then complete Phase 3.
+- **Preserve existing code:** Avoid unnecessary changes to the main Next.js/React application.
+- **Debug using evidence:** Use actual terminal errors and build output rather than guessing.
+- **Verify before declaring completion:** Mark requirements complete only after checking the actual implementation.
+- **Document accurately:** Record the commands, changes, and verification results that actually occurred.
+
+---
+
+# PHASE 1 — Environment Configuration & Base MVP (P0)
+
+## Prompt 1: Existing Project Inspection
+
+**Objective:** Understand the existing repository before installing or changing Storybook.
+
+**Prompt:**
+
+I am completing Sprint 12 — Real-Time Systems & UI Isolation, Track A: Frontend Specialist.
+
+My task is to implement a Storybook component library in my existing Next.js/React repository.
+
+Before making any changes, inspect the project structure and determine:
+
+1. Whether the project uses Next.js or React.
+2. Whether it uses JavaScript or TypeScript.
+3. Which package manager is being used.
+4. Which styling system is present, such as Tailwind CSS, CSS Modules, or plain CSS.
+5. Whether Storybook is already installed.
+6. Whether a `.storybook` configuration directory already exists.
+7. Whether reusable Button, Input, and Card components already exist.
+8. Which dependencies and configuration files are relevant.
+
+Do not create a new project or replace the existing application. Identify the minimum files that need to be created or modified.
+
+Return a concise implementation plan and explain any compatibility risks before making changes.
+
+**Verification:**
+
+Inspect the existing files and confirm that the implementation plan matches the actual project structure.
+
+## Prompt 2: Storybook Installation and Configuration
+
+**Objective:** Configure Storybook within the existing project.
+
+**Prompt:**
+
+Implement the Storybook setup required for Sprint 12 Track A, Phase 1.
+
+Requirements:
+
+1. Configure Storybook inside the existing project.
+2. Use the appropriate setup command for the installed framework and package manager.
+3. Create or update the `.storybook` configuration files.
+4. Preserve the existing application and styling system.
+5. Configure global CSS or Tailwind CSS where necessary.
+6. Configure any required Next.js-specific Storybook integration.
+7. Avoid unnecessary dependencies and unrelated changes.
+8. Ensure the existing application remains intact.
+
+After configuration, provide the exact command needed to start Storybook.
+
+Diagnose actual errors if they occur. Do not declare setup complete until Storybook starts and displays its dashboard.
+
+**Verification:**
+
+Confirm that the Storybook server launches and renders its interface independently of the main application runtime.
+
+## Prompt 3: Reusable UI Component Development
+
+**Objective:** Create or adapt three core UI components.
+
+**Prompt:**
+
+Implement the core UI components needed for Sprint 12 Track A.
+
+The required components are:
+
+1. Button
+2. Input Field
+3. Card / Product Card
+
+First check whether suitable components already exist. Reuse or adapt existing components where appropriate instead of creating duplicates.
+
+Requirements:
+
+- Use the existing framework and styling conventions.
+- Make the components reusable through props.
+- Use accessible HTML elements and appropriate labels.
+- Support sensible default properties.
+- Provide clear visual styling consistent with the existing project.
+- Support disabled states where applicable.
+- Keep the main application functional.
+- Do not introduce unnecessary dependencies.
+
+Create the necessary component files and provide complete code for any files that need changes.
+
+Explain how each component can be imported and rendered.
+
+**Verification:**
+
+Inspect each component and confirm that it can be rendered independently and does not depend unnecessarily on unrelated application functionality.
+
+## Prompt 4: Create Storybook Stories
+
+**Objective:** Display the components in the Storybook dashboard.
+
+**Prompt:**
+
+Create Storybook stories for the Button, Input Field, and Card components.
+
+Requirements:
+
+1. Each component must have its own story file.
+2. Provide a default story for each component.
+3. Provide meaningful visual states where appropriate.
+4. Use the Storybook Component Story Format supported by the installed Storybook version.
+5. Configure valid component metadata, titles, and exports.
+6. Ensure all three components appear in the Storybook sidebar.
+7. Fix incorrect imports, incompatible configuration, or rendering errors.
+
+Do not assume that creating a story file is sufficient. Verify that Storybook can actually load and render the stories.
+
+**Verification:**
+
+Open all three stories in Storybook and confirm that each component renders correctly.
+
+---
+
+# PHASE 2 — Variant Engineering & Theming (P1)
+
+## Prompt 5: Storybook Args and Controls
+
+**Objective:** Make components interactive through Storybook Controls.
+
+**Prompt:**
+
+Implement interactive Args and Controls for the Button, Input Field, and Card stories.
+
+### Button
+
+Provide controls for:
+
+- Variant: Primary and Secondary
+- Disabled: true and false
+- Size: Small, Medium, and Large
+
+### Input Field
+
+Provide suitable controls for:
+
+- Label
+- Placeholder
+- Disabled state
+- Value or other appropriate input properties
+
+### Card / Product Card
+
+Provide suitable controls for:
+
+- Title
+- Description
+- Content or image, where appropriate
+- Other useful presentation properties
+
+Implementation requirements:
+
+1. Use the installed Storybook version's supported Args and Controls APIs.
+2. Define sensible default values.
+3. Ensure controls update the component preview.
+4. Avoid duplicating complete components for individual variants.
+5. Keep types, property definitions, and story metadata consistent.
+6. Preserve the existing application and styling system.
+
+**Verification:**
+
+Open each story, change its controls, and confirm that the preview responds to the selected values.
+
+## Prompt 6: Light Mode and Dark Mode
+
+**Objective:** Support theme switching in Storybook.
+
+**Prompt:**
+
+Implement Light Mode and Dark Mode support for my Storybook component library.
+
+Requirements:
+
+1. Provide a convenient way to switch between Light Mode and Dark Mode in the Storybook environment.
+2. Ensure Button, Input, and Card render appropriately in both themes.
+3. Reuse the existing theme system if the project already has one.
+4. Configure global styles, CSS variables, or Tailwind classes as appropriate to the actual project.
+5. Ensure component text, backgrounds, borders, and focus states remain readable.
+6. Avoid duplicating the entire main application.
+7. Use an approach compatible with the installed Storybook version.
+
+After implementation, explain how to switch themes and test every component in both modes.
+
+Do not claim theme support is complete without checking the actual previews.
+
+**Verification:**
+
+Switch between themes and inspect the Button, Input, and Card stories in both Light Mode and Dark Mode.
+
+## Prompt 7: Debugging and Error Resolution
+
+**Objective:** Diagnose errors encountered during implementation.
+
+**Prompt:**
+
+Investigate the following actual error from my Sprint 12 Storybook project:
+
+[Paste the complete terminal error or browser-console error here.]
+
+Inspect the relevant configuration, source files, dependency versions, and error context.
+
+Then:
+
+1. Identify the likely root cause.
+2. Explain why the error occurs.
+3. Name the exact file or configuration that needs modification.
+4. Provide the smallest safe fix.
+5. Avoid unnecessary package reinstalls or deleting project files.
+6. Preserve the main Next.js/React application.
+7. Provide the command to rerun the relevant verification.
+
+Do not assume the error is fixed until the command or feature has been tested again. If the issue remains, continue debugging based on the new output.
+
+**Verification:**
+
+Record the actual error, the change made, and the subsequent result. Include only debugging steps that were actually performed.
+
+---
+
+# PHASE 3 — Static Compilation & Deployment (P2)
+
+## Prompt 8: Production Storybook Build
+
+**Objective:** Generate the production-ready static Storybook website.
+
+**Prompt:**
+
+Prepare my Storybook component library for production.
+
+Requirements:
+
+1. Check the existing Storybook configuration and package scripts.
+2. Determine the correct build command for the installed Storybook version.
+3. Run the static Storybook build.
+4. Diagnose and fix actual build errors.
+5. Preserve the existing application.
+6. Confirm the expected output directory.
+7. Check that the generated output contains the Storybook interface and relevant component stories.
+8. Report the actual build result and output path.
+
+Do not claim that the build succeeded until the command completes successfully.
+
+**Verification record:**
+
+The Storybook build completed successfully and reported the output directory:
+
+`C:/Users/prati/OneDrive/Desktop/nextjs-network-testing/storybook-static`
+
+The generated directory was checked for `index.html`.
+
+## Prompt 9: Separate GitHub Repository Preparation
+
+**Objective:** Prepare a dedicated repository for Sprint 12.
+
+**Prompt:**
+
+Help me prepare a separate GitHub repository named `sprint-12-storybook` for my Sprint 12 Track A submission.
+
+My existing project is located at:
+
+`C:/Users/prati/OneDrive/Desktop/nextjs-network-testing`
+
+The new repository is located at:
+
+`C:/Users/prati/OneDrive/Documents/GitHub/sprint-12-storybook`
+
+Requirements:
+
+1. Keep the original repository intact.
+2. Copy the required component source files, Storybook stories, configuration, dependencies manifest, and project documentation into the new repository.
+3. Do not copy the original `.git` directory or `node_modules`.
+4. Exclude generated caches and secret files.
+5. Preserve any public assets required by the components.
+6. Include `Prompts.md` and an appropriate README.
+7. Review the copied files before committing.
+8. Publish the repository separately through GitHub Desktop.
+
+Do not assume the repository is published until GitHub confirms that it is available online.
+
+**Verification:**
+
+Check the new repository's file structure, review the pending Git changes, commit the intended files, and confirm publication.
+
+## Prompt 10: Static Storybook Deployment to Vercel
+
+**Objective:** Deploy Storybook separately from the main Next.js website.
+
+**Prompt:**
+
+Help me deploy the static Storybook website for Sprint 12 Track A to Vercel.
+
+My Storybook build output is:
+
+`C:/Users/prati/OneDrive/Desktop/nextjs-network-testing/storybook-static`
+
+Requirements:
+
+1. Deploy the Storybook website, not accidentally the main Next.js application.
+2. Use a separate Vercel project named `sprint-12-storybook`.
+3. Inspect the output structure and determine the correct static output directory.
+4. Configure the framework preset, build command, and output directory appropriately.
+5. Avoid rebuilding the wrong application.
+6. Do not expose environment variables, secrets, or private credentials.
+7. Explain any required GitHub integration or deployment configuration.
+8. Provide the resulting public URL only after the deployment completes.
+9. Open the deployed website and verify that the Storybook interface loads.
+10. Check the component stories, Args/Controls, and theme behavior on the deployed website.
+
+If the deployment fails, use the actual error output to diagnose it and provide the smallest safe fix.
+
+**Verification:**
+
+Record the deployed URL and test the live interface. Do not report a successful deployment until the URL has been checked.
+
+---
+
+# 3. Final Requirement Audit
+
+## P0 — Environment and Base MVP
+
+- [ ] Storybook configured in the existing project
+- [ ] Storybook starts successfully
+- [ ] Button story created and verified
+- [ ] Input story created and verified
+- [ ] Card/Product Card story created and verified
+- [ ] Components render correctly in isolation
+
+## P1 — Variants and Theming
+
+- [ ] Args and Controls configured
+- [ ] Primary and Secondary Button variants work
+- [ ] Disabled state works
+- [ ] Size variants work
+- [ ] Input Controls work
+- [ ] Card Controls work
+- [ ] Light Mode works
+- [ ] Dark Mode works
+
+## P2 — Build and Deployment
+
+- [x] Static Storybook build completed successfully
+- [x] Generated output directory contains `index.html`
+- [ ] Separate GitHub repository published
+- [ ] `Prompts.md` committed to the repository
+- [ ] Vercel deployment completed
+- [ ] Public Storybook URL verified
+
+The checked status above records the build and output-file checks performed so far. Other requirements must be marked complete only after actual verification.
+
+# 4. Submission and QA Demonstration
+
+The final submission should contain:
+
+- GitHub repository URL
+- Live Storybook URL
+- Three-minute QA demonstration video URL
+- `Prompts.md`
+- README documentation
+
+The QA demonstration should show:
+
+1. The deployed Storybook dashboard.
+2. Button, Input, and Card stories.
+3. Interactive Args and Controls.
+4. Primary, Secondary, Disabled, and size variants.
+5. Light Mode and Dark Mode.
+6. The repository and project documentation.
+
+The recording must reflect the actual implementation and demonstrate working features rather than relying only on source code or screenshots.
+
+---
+
+## 5. Responsible Use of AI Assistance
+
+AI was used as a development aid for planning, component implementation, configuration guidance, troubleshooting, and documentation.
+
+AI-generated code and recommendations must be checked against the actual repository and tested before being considered complete.
+
+This document describes the prompt strategy for the sprint. Any prompt that was not actually used should be treated as a planned or reconstructed prompt rather than a historical record of a completed action. Build and deployment status must reflect actual test results.
